@@ -26,7 +26,7 @@ class SettingsController < ApplicationController
   private
 
   def settings_params
-    params.require(:setting).permit(:channel_type, :name, :bot_id, :bot_name)
+    params.require(:setting).permit(:channel_type, :name, :bot_id, :bot_name, :web_url)
   end
 
 end

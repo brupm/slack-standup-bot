@@ -24,4 +24,4 @@ en:
                      • -delete: #(1,2,3)             Delete your answer for the day.
 
         quit: Quiting Standup
-        resume: That concludes our standup. For a recap visit http://quiet-shore-3330.herokuapp.com/
+        resume: That concludes our standup. For a recap visit %{web_url}

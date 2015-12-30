@@ -1,3 +1,4 @@
+
 .container
   .text-center
     - if @settings.nil?
@@ -8,6 +9,9 @@
         = f.label "Bot name"
         = f.text_field :bot_name
         %br
+        = f.label "Web Url"
+        = f.text_field :web_url
+        %br
         = f.submit
     - else
       = form_for @settings do |f|
@@ -16,5 +20,8 @@
         %br
         = f.label "Bot name"
         = f.text_field :bot_name
+        %br
+        = f.label "Web Url"
+        = f.text_field :web_url
         %br
         = f.submit class: "btn btn-default"
