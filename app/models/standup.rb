@@ -96,21 +96,21 @@ class Standup < ActiveRecord::Base
 
   def question_for_number(number)
     case number
-    when 1 then Time.now.wday == 4 ? "1. What did you do on Friday?" : "1. What did you do yesterday?"
-    when 2 then "2. What are you working on today?"
-    when 3 then "3. Is there anything standing in your way?"
+    when 1 then Time.now.wday == 4 ? "1. What changes did you make last week that impact others?"
+    when 2 then "2. What changes are you making this week that will impact others?"
+    when 3 then "3. Any blocker?"
     end
   end
 
   def current_question
     if self.yesterday.nil?
-      Time.now.wday == 1 ? "<@#{self.user.slack_id}> 1. What did you do on Friday?" : "<@#{self.user.slack_id}> 1. What did you do yesterday?"
+      "<@#{self.user.slack_id}> 1. What changes did you make last week that impact others?"
 
     elsif self.today.nil?
-      "<@#{self.user.slack_id}> 2. What are you working on today?"
+      "<@#{self.user.slack_id}> 2. What changes are you making this week that will impact others?"
 
     elsif self.conflicts.nil?
-      "<@#{self.user.slack_id}> 3. Is there anything standing in your way?"
+      "<@#{self.user.slack_id}> 3. Any blocker?"
     end
   end
 
