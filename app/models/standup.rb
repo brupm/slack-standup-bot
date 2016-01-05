@@ -98,7 +98,7 @@ class Standup < ActiveRecord::Base
     case number
     when 1 then "1. What changes did you make last week that impact others?"
     when 2 then "2. What changes are you making this week that will impact others?"
-    when 3 then "3. Any blocker?"
+    when 3 then "3. Any blockers?"
     end
   end
 
@@ -110,7 +110,7 @@ class Standup < ActiveRecord::Base
       "<@#{self.user.slack_id}> 2. What changes are you making this week that will impact others?"
 
     elsif self.conflicts.nil?
-      "<@#{self.user.slack_id}> 3. Any blocker?"
+      "<@#{self.user.slack_id}> 3. Any blockers?"
     end
   end
 

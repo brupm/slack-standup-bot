@@ -3,7 +3,7 @@ en:
     models:
       incoming_message:
         standup_started: Standup has started.
-        welcome: Good morning <@%{user}>, Welcome to daily standup! Are you ready to begin? ('-yes', or '-skip')
+        welcome: Good day <@%{user}>, Welcome to weekly Tech Scrum! Are you ready to begin? ('-yes', or '-skip')
 
         answer_saved: Your answer has been saved.
 
