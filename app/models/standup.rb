@@ -96,7 +96,7 @@ class Standup < ActiveRecord::Base
 
   def question_for_number(number)
     case number
-    when 1 then Time.now.wday == 4 ? "1. What changes did you make last week that impact others?"
+    when 1 then "1. What changes did you make last week that impact others?"
     when 2 then "2. What changes are you making this week that will impact others?"
     when 3 then "3. Any blocker?"
     end
