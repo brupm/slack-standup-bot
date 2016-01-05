@@ -1,5 +1,6 @@
 class SettingsController < ApplicationController
 
+
   # GET /settings
   def index
     @settings = Setting.first_or_initialize
